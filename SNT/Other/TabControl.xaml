@@ -1,0 +1,133 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SNT">    
+    <Style TargetType="{x:Type TabControl}">
+        <!-- Шаблон по умолчанию, отредактированное место отмечено комментариями -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabControl}">
+                    <Grid ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Name="ColumnDefinition0"/>
+                            <ColumnDefinition x:Name="ColumnDefinition1" Width="0"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition x:Name="RowDefinition0" Height="Auto"/>
+                            <RowDefinition x:Name="RowDefinition1" Height="*"/>
+                        </Grid.RowDefinitions>
+                        <!-- TabPanel begin--> 
+                        <!-- TabPanel обернут в ScrollViewer, шаблон которого меняется в триггере при расположении TabPanel вверху,
+                        из TabPanel в ScrollViewer перенесены Grid.Column, Grid.Row, Panel.ZIndex, 
+                        а также добавлен Margin с -1 и изменен четвертый Margin у TabPanel на 1 
+                        - чтобы не отображался нижний border на выбранной вкладке -->
+                        <ScrollViewer x:Name="TabScroll" SnapsToDevicePixels="True" HorizontalScrollBarVisibility="Auto" 
+                                      VerticalScrollBarVisibility="Auto" 
+                                      Grid.Column="0" Grid.Row="0" Panel.ZIndex="1" Margin="0,0,0,-1">
+                            <TabPanel x:Name="HeaderPanel" IsItemsHost="True" Margin="2,2,2,1" KeyboardNavigation.TabIndex="1"/>                            
+                        </ScrollViewer>
+                        <!-- TabPanel end -->
+                        <Border x:Name="ContentPanel" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                            <ContentPresenter x:Name="PART_SelectedContentHost" ContentTemplate="{TemplateBinding SelectedContentTemplate}" Content="{TemplateBinding SelectedContent}" ContentStringFormat="{TemplateBinding SelectedContentStringFormat}" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Trigger begin -->
+                        <Trigger Property="TabStripPlacement" Value="Top">
+                            <!-- Изменение шаблона ScrollViewer: из шаблона по умолчанию
+                            удалены Grid.RowDefinitions, Rectangle, 2 ScrollBar вертикальный и горизонтальный,
+                            добален StackPanel с кнопками прокрутки -->
+                            <Setter Property="Template" TargetName="TabScroll">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                        <Grid x:Name="Grid" Background="{TemplateBinding Background}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" CanContentScroll="{TemplateBinding CanContentScroll}" 
+                                                                CanHorizontallyScroll="False" CanVerticallyScroll="False" 
+                                                                ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                                                Content="{TemplateBinding Content}" Grid.Column="0" 
+                                                                Margin="{TemplateBinding Padding}" Grid.Row="0"/>
+                                            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="5" 
+                                                        Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}">
+                                                <RepeatButton Command="ScrollBar.LineLeftCommand" Height="15" Width="15" Margin="5,0,0,0">
+                                                    <RepeatButton.Template>
+                                                        <ControlTemplate TargetType="{x:Type RepeatButton}">
+                                                            <Border x:Name="border" Background="LightGray" BorderThickness="1" BorderBrush="Gray">
+                                                                <Path x:Name="path" Data="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
+                                                                      Stretch="Uniform" Stroke="Gray" StrokeThickness="1"/>
+                                                            </Border>
+                                                            <ControlTemplate.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter TargetName="border" Property="Background" Value="Gray"/>
+                                                                    <Setter TargetName="path" Property="Stroke" Value="White"/>
+                                                                </Trigger>
+                                                            </ControlTemplate.Triggers>
+                                                        </ControlTemplate>
+                                                    </RepeatButton.Template>
+                                                </RepeatButton>
+                                                <RepeatButton Command="ScrollBar.LineRightCommand" Height="15" Width="15">
+                                                    <RepeatButton.Template>
+                                                        <ControlTemplate TargetType="{x:Type RepeatButton}">
+                                                            <Border x:Name="border" Background="LightGray" BorderThickness="1" BorderBrush="Gray">
+                                                                <Path x:Name="path" Data="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                                                                      Stretch="Uniform" Stroke="Gray" StrokeThickness="1"/>
+                                                            </Border>
+                                                            <ControlTemplate.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter TargetName="border" Property="Background" Value="Gray"/>
+                                                                    <Setter TargetName="path" Property="Stroke" Value="White"/>
+                                                                </Trigger>
+                                                            </ControlTemplate.Triggers>
+                                                        </ControlTemplate>
+                                                    </RepeatButton.Template>
+                                                </RepeatButton>
+                                            </StackPanel>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <!-- Trigger end -->
+                        <Trigger Property="TabStripPlacement" Value="Bottom">
+                            <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="1"/>
+                            <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                            <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                            <Setter Property="Height" TargetName="RowDefinition1" Value="Auto"/>
+                            <Setter Property="Margin" TargetName="HeaderPanel" Value="2,0,2,2"/>
+                        </Trigger>
+                        <Trigger Property="TabStripPlacement" Value="Left">
+                            <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0"/>
+                            <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                            <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="0"/>
+                            <Setter Property="Grid.Column" TargetName="ContentPanel" Value="1"/>
+                            <Setter Property="Width" TargetName="ColumnDefinition0" Value="Auto"/>
+                            <Setter Property="Width" TargetName="ColumnDefinition1" Value="*"/>
+                            <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                            <Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
+                            <!-- Margin -+1 begin -->
+                            <Setter Property="Margin" TargetName="TabScroll" Value="0,0,-1,0"/>
+                            <Setter Property="Margin" TargetName="HeaderPanel" Value="2,2,1,2"/>
+                            <!-- Margin -+1 end -->
+                        </Trigger>
+                        <Trigger Property="TabStripPlacement" Value="Right">
+                            <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0"/>
+                            <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                            <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="1"/>
+                            <Setter Property="Grid.Column" TargetName="ContentPanel" Value="0"/>
+                            <Setter Property="Width" TargetName="ColumnDefinition0" Value="*"/>
+                            <Setter Property="Width" TargetName="ColumnDefinition1" Value="Auto"/>
+                            <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                            <Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
+                            <Setter Property="Margin" TargetName="HeaderPanel" Value="0,2,2,2"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

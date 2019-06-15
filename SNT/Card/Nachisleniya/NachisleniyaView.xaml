@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="SNT.NachisleniyaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SNT"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+    </UserControl.Resources>
+    <!-- FocusManager.FocusedElement, указывающий на дочерний элемент,
+    чтобы фокус при открытии устанавливался на нужный элемент -->
+    <Grid FocusManager.FocusedElement="{Binding ElementName=FocusedElement}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Итоговые суммы начислений" BorderBrush="LightGray" 
+                  BorderThickness="2" Margin="10">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ToolBar Grid.Row="0">
+                    <Button Content="Обновить" Command="{Binding RefreshSumItogCommand}"/>
+                    <Separator/>
+                    <CheckBox Content="Показать ранние начисления" Command="{Binding ShowSumItogCommand}"
+                              CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}"/>
+                </ToolBar>
+                <DataGrid x:Name="FocusedElement" Grid.Row="1" ItemsSource="{Binding DataViewSumItog}" 
+                          SelectedIndex="{Binding SelectedSumItog}" SelectedItem="{Binding SelectedRowSumItog}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Период" Binding="{Binding Path=PERIOD}" />
+                        <DataGridTextColumn Header="Долг/переплата" 
+                                            Binding="{Binding Path=DOLG, StringFormat=N, ConverterCulture=ru-RU}" />
+                        <DataGridTextColumn Header="Начислено к оплате" 
+                                            Binding="{Binding Path=K_OPLATE, StringFormat=N, ConverterCulture=ru-RU}" />
+                        <DataGridTextColumn Header="Итого к оплате" 
+                                            Binding="{Binding Path=ITOGO_K_OPLATE, StringFormat=N, ConverterCulture=ru-RU}" />
+                        <DataGridTextColumn Header="Оплачено" 
+                                            Binding="{Binding Path=OPLACHENO, StringFormat=N, ConverterCulture=ru-RU}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Расшифровка по взносам за выбранный период" BorderBrush="LightGray" 
+                  BorderThickness="2" Margin="10">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ToolBar Grid.Row="0" FocusManager.IsFocusScope="False">
+                    <Button Content="Сохранить" Command="{Binding SaveNachislenieCommand}"/>
+                </ToolBar>
+                <DataGrid Grid.Row="1" IsReadOnly="False" CanUserAddRows="False" 
+                          ItemsSource="{Binding DataViewNachislenie}">
+                    <DataGrid.Columns>
+                        <DataGridComboBoxColumn Header="Вид взноса" DisplayMemberPath="Name" 
+                                                SelectedValuePath="Id" IsReadOnly="True" 
+                                                SelectedValueBinding="{Binding Path=ID_SERVICE}">
+                            <DataGridComboBoxColumn.ElementStyle>
+                                <Style TargetType="{x:Type ComboBox}">
+                                    <Setter Property="ItemsSource" Value="{Binding DataContext.Dictionary, 
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                </Style>
+                            </DataGridComboBoxColumn.ElementStyle>
+                        </DataGridComboBoxColumn>
+                        <DataGridTextColumn Header="Изменение" 
+                                            Binding="{Binding Path=IZMENENIE, StringFormat=N, ConverterCulture=ru-RU}" />
+                        <DataGridTextColumn Header="Начислено" IsReadOnly="True" 
+                                            Binding="{Binding Path=NACHIS, StringFormat=N, ConverterCulture=ru-RU}" />
+                        <DataGridTextColumn Header="К оплате" IsReadOnly="True" 
+                                            Binding="{Binding Path=K_OPLATE, StringFormat=N, ConverterCulture=ru-RU}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

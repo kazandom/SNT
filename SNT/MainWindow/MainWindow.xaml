@@ -1,0 +1,86 @@
+﻿<Window x:Class="SNT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SNT"
+        mc:Ignorable="d"
+        Title="СНТ" WindowStartupLocation="CenterScreen" FontSize="13">
+    <Window.Resources>        
+        <Style TargetType="Menu">
+            <Setter Property="FontSize" Value="{Binding FontSize, 
+                            RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+        </Style>
+        <ControlTemplate TargetType="Button" x:Key="CloseTabButton">
+            <Border x:Name="border" Background="Transparent">
+                <Path x:Name="path" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1"
+                      Stretch="Uniform" Stroke="Gray" StrokeThickness="1.5"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="Gray"/>
+                    <Setter TargetName="path" Property="Stroke" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style TargetType="TabItem">
+            <Setter Property="Padding" Value="6,3"/>
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="1" >
+            <MenuItem Header="Участки" Command="{Binding OpenTabCommand}" 
+                      CommandParameter="Выбор участков"/>
+            <MenuItem Header="Справочники">
+                <MenuItem Header="Собственники" Command="{Binding OpenTabCommand}" 
+                          CommandParameter="Собственники"/>
+                <MenuItem Header="Параметры" Command="{Binding OpenTabCommand}" 
+                          CommandParameter="Параметры"/>
+                <Separator/>
+                <MenuItem Header="Взносы" Command="{Binding OpenTabCommand}" 
+                          CommandParameter="Взносы"/>
+                <MenuItem Header="Тарифы" Command="{Binding OpenTabCommand}" 
+                          CommandParameter="Тарифы"/>
+                <MenuItem Header="Глобальные параметры" Command="{Binding OpenTabCommand}" 
+                          CommandParameter="Глобальные параметры"/>
+            </MenuItem>
+            <MenuItem Header="Начисления">
+                <MenuItem Header="Пакетный расчет начислений" Command="{Binding OpenRaschetCommand}"/>
+                <MenuItem Header="Текущий расчетный период" Command="{Binding OpenPeriodSelectionCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Оплаты" Command="{Binding OpenTabCommand}" 
+                      CommandParameter="Оплаты"/>
+            <MenuItem Header="Отчеты">
+                <MenuItem Header="Реестр собственнников" Command="{Binding OpenTabCommand}" 
+                          CommandParameter="Отчет Реестр собственнников"/>
+                <MenuItem Header="Начисления и оплаты" Command="{Binding OpenTabCommand}" 
+                          CommandParameter="Отчет Начисления и оплаты"/>
+            </MenuItem>
+            <MenuItem Header="Реквизиты" Command="{Binding OpenTabCommand}"
+                      CommandParameter="Реквизиты"/>
+        </Menu>
+        <TabControl Grid.Row="1" ItemsSource="{Binding Items}" SelectedIndex="{Binding Selected}">
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=TabName}" MaxWidth="150" TextTrimming="CharacterEllipsis"/>
+                        <Button Height="15" Width="15" Margin="5,0,0,0" Template="{StaticResource CloseTabButton}" 
+                                Command="{Binding DataContext.CloseTabCommand, 
+                            RelativeSource={RelativeSource AncestorType={x:Type Window}}}" 
+                                CommandParameter="{Binding Path=TabName}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <ContentControl Content="{Binding Path=Content}" />
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+    </Grid>
+</Window>

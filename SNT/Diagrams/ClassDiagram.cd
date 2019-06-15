@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SNT.CardModel" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.75" />
+    <InheritanceLine Type="SNT.RaschetModel" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21" Y="3.875" />
+        <Point X="21.411" Y="3.875" />
+        <Point X="21.411" Y="3.422" />
+        <Point X="15.354" Y="3.422" />
+        <Point X="15.354" Y="4.875" />
+        <Point X="15.333" Y="4.875" Type="JumpStart" />
+        <Point X="15.167" Y="4.875" Type="JumpEnd" />
+        <Point X="15.073" Y="4.875" Type="JumpStart" />
+        <Point X="14.907" Y="4.875" Type="JumpEnd" />
+        <Point X="14.75" Y="4.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAEAAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\CardModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.CardView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\CardView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.CardViewModel" Collapsed="true">
+    <Position X="11" Y="4.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="5.345" />
+        <Point X="15.073" Y="5.345" Type="JumpStart" />
+        <Point X="14.907" Y="5.345" Type="JumpEnd" />
+        <Point X="12" Y="5.345" />
+        <Point X="12" Y="5.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IABADAAAQQgAAAEAAoQAAAKEAAAAQAAAAEAAACAAAgA=</HashCode>
+      <FileName>Card\CardViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.GlobalParamsModel" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.75" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="1.062" />
+        <Point X="18.25" Y="1.311" />
+        <Point X="21.741" Y="1.311" />
+        <Point X="21.741" Y="2.875" />
+        <Point X="21.25" Y="2.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GlobalParams\GlobalParamsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.GlobalParamsView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GlobalParams\GlobalParamsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.GlobalParamsViewModel" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="3.29" />
+        <Point X="18.375" Y="3.29" />
+        <Point X="18.375" Y="3.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAECBAAAAAQAgAAgBAAAIAQAACAEAQA=</HashCode>
+      <FileName>GlobalParams\GlobalParamsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.MainViewModel" Collapsed="true">
+    <Position X="11" Y="1.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="2.346" />
+        <Point X="15.073" Y="2.346" Type="JumpStart" />
+        <Point X="14.907" Y="2.346" Type="JumpEnd" />
+        <Point X="12" Y="2.346" />
+        <Point X="12" Y="2.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAACAAAIAAACAAIABAQCAAQEAAAAjAAAAI=</HashCode>
+      <FileName>MainWindow\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.TabViewModel" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.75" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="2.345" />
+        <Point X="15.073" Y="2.345" Type="JumpStart" />
+        <Point X="14.907" Y="2.345" Type="JumpEnd" />
+        <Point X="13.812" Y="2.345" />
+        <Point X="13.812" Y="2.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>MainWindow\TabViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.OwnersModel" Collapsed="true">
+    <Position X="13" Y="5.5" Width="1.75" />
+    <InheritanceLine Type="SNT.FirstModel" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="1.062" />
+        <Point X="18.25" Y="1.297" />
+        <Point X="15.333" Y="1.297" Type="JumpStart" />
+        <Point X="15.167" Y="1.297" Type="JumpEnd" />
+        <Point X="14.99" Y="1.297" />
+        <Point X="14.99" Y="5.875" />
+        <Point X="14.75" Y="5.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Owners\OwnersModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.OwnersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Owners\OwnersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.OwnersViewModel" Collapsed="true">
+    <Position X="11" Y="5.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="6.371" />
+        <Point X="15.073" Y="6.371" Type="JumpStart" />
+        <Point X="14.907" Y="6.371" Type="JumpEnd" />
+        <Point X="12" Y="6.371" />
+        <Point X="12" Y="6.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAIAAAECBAAAAAQAgAAgBAAAIAQAAAAEAQA=</HashCode>
+      <FileName>Owners\OwnersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.ParametersModel" Collapsed="true">
+    <Position X="13" Y="6.5" Width="1.75" />
+    <InheritanceLine Type="SNT.FirstModel" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="1.062" />
+        <Point X="18.25" Y="1.297" />
+        <Point X="15.333" Y="1.297" Type="JumpStart" />
+        <Point X="15.167" Y="1.297" Type="JumpEnd" />
+        <Point X="14.99" Y="1.297" />
+        <Point X="14.99" Y="6.875" />
+        <Point X="14.75" Y="6.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parameters\ParametersModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.ParametersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parameters\ParametersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.ParametersViewModel" Collapsed="true">
+    <Position X="11" Y="6.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="7.348" />
+        <Point X="15.073" Y="7.348" Type="JumpStart" />
+        <Point X="14.907" Y="7.348" Type="JumpEnd" />
+        <Point X="12" Y="7.348" />
+        <Point X="12" Y="7.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAECBAAAAAQAgAAAAAAAAIQAAAAEAQA=</HashCode>
+      <FileName>Parameters\ParametersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.PaymentsModel" Collapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="1.062" />
+        <Point X="18.25" Y="1.314" />
+        <Point X="21.744" Y="1.314" />
+        <Point X="21.744" Y="5.875" />
+        <Point X="21" Y="5.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Payments\PaymentsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.PaymentsView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Payments\PaymentsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.PaymentsViewModel" Collapsed="true">
+    <Position X="17.25" Y="5.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="6.368" />
+        <Point X="18.375" Y="6.368" />
+        <Point X="18.375" Y="6.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAJAAAECBAAAAAQAgAAgBAAAIAQAAAAEAQA=</HashCode>
+      <FileName>Payments\PaymentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.PeriodSelectionModel" Collapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.75" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="1.062" />
+        <Point X="18.25" Y="1.297" />
+        <Point X="21.742" Y="1.297" />
+        <Point X="21.742" Y="4.875" />
+        <Point X="21.25" Y="4.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriodSelection\PeriodSelectionModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.PeriodSelectionView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeriodSelection\PeriodSelectionView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.PeriodSelectionViewModel" Collapsed="true">
+    <Position X="17.25" Y="4.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="5.345" />
+        <Point X="18.375" Y="5.345" />
+        <Point X="18.375" Y="5.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAIAAAECBAAAAAQAgAAAAAAAAAQAAAAEAQA=</HashCode>
+      <FileName>PeriodSelection\PeriodSelectionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.RaschetModel" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="4.364" />
+        <Point X="15.271" Y="4.364" Type="JumpStart" />
+        <Point X="15.437" Y="4.364" Type="JumpEnd" />
+        <Point X="20.25" Y="4.364" />
+        <Point X="20.25" Y="4.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAAAQA=</HashCode>
+      <FileName>Raschet\RaschetModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.RaschetView" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Raschet\RaschetView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.RaschetViewModel" Collapsed="true">
+    <Position X="17.25" Y="3.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="4.368" />
+        <Point X="15.271" Y="4.368" Type="JumpStart" />
+        <Point X="15.437" Y="4.368" Type="JumpEnd" />
+        <Point X="18.375" Y="4.368" />
+        <Point X="18.375" Y="4.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAEoAAABKAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Raschet\RaschetViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.RekvizityModel" Collapsed="true">
+    <Position X="19.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAAQAAAAAAAACAAAAAAAgAAAAAAABAAAAQAAgCA=</HashCode>
+      <FileName>Rekvizity\RekvizityModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.RekvizityView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rekvizity\RekvizityView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.RekvizityViewModel" Collapsed="true">
+    <Position X="17.25" Y="7.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="8.392" />
+        <Point X="18.438" Y="8.392" />
+        <Point X="18.438" Y="8.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAQAAIAEAAA=</HashCode>
+      <FileName>Rekvizity\RekvizityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.TarifyModel" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true">
+      <Path>
+        <Point X="18.25" Y="1.062" />
+        <Point X="18.25" Y="1.312" />
+        <Point X="21.748" Y="1.312" />
+        <Point X="21.748" Y="1.846" />
+        <Point X="21" Y="1.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tarify\TarifyModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.TarifyView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tarify\TarifyView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.TarifyViewModel" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="2.345" />
+        <Point X="18.375" Y="2.345" />
+        <Point X="18.375" Y="2.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAIAAAECBAAAAAQAgAAgBAAAIAQAAAAEAQA=</HashCode>
+      <FileName>Tarify\TarifyViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.AddUchastokModel" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.75" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="4.359" />
+        <Point X="15.073" Y="4.359" Type="JumpStart" />
+        <Point X="14.907" Y="4.359" Type="JumpEnd" />
+        <Point X="13.875" Y="4.359" />
+        <Point X="13.875" Y="4.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAIAABACAAAQAAAAAAEIACABCAAwA=</HashCode>
+      <FileName>Uchastki\AddUchastok\AddUchastokModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.AddUchastokView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Uchastki\AddUchastok\AddUchastokView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.UchastkiModel" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIBAAAAAAAEAQAAAQAEAAAAAEAAAAAAAAQA=</HashCode>
+      <FileName>Uchastki\UchastkiModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.UchastkiView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Uchastki\UchastkiView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.UchastkiViewModel" Collapsed="true">
+    <Position X="11" Y="3" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="4.366" />
+        <Point X="15.073" Y="4.366" Type="JumpStart" />
+        <Point X="14.907" Y="4.366" Type="JumpEnd" />
+        <Point X="12" Y="4.366" />
+        <Point X="12" Y="3.691" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIJAAAGCBAAAQAQAgEAAAABAAAAAABAAAQA=</HashCode>
+      <FileName>Uchastki\UchastkiViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.VznosyModel" Collapsed="true">
+    <Position X="13" Y="7.5" Width="1.75" />
+    <InheritanceLine Type="SNT.FirstModel" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="1.062" />
+        <Point X="18.25" Y="1.297" />
+        <Point X="15.333" Y="1.297" Type="JumpStart" />
+        <Point X="15.167" Y="1.297" Type="JumpEnd" />
+        <Point X="14.99" Y="1.297" />
+        <Point X="14.99" Y="7.875" />
+        <Point X="14.75" Y="7.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vznosy\VznosyModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.VznosyView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vznosy\VznosyView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.VznosyViewModel" Collapsed="true">
+    <Position X="11" Y="7.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="8.392" />
+        <Point X="12" Y="8.392" />
+        <Point X="12" Y="8.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAQECBAAAAAQAgAAgBAAAIAQAAAAEIQA=</HashCode>
+      <FileName>Vznosy\VznosyViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.ReportCurrentDolgView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\CurrentDolg\ReportCurrentDolgView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.ReportCurrentDolgViewModel" Collapsed="true">
+    <Position X="21.5" Y="6.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="7.366" />
+        <Point X="22.688" Y="7.366" />
+        <Point X="22.688" Y="7.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAABQA=</HashCode>
+      <FileName>Reports\CurrentDolg\ReportCurrentDolgViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.ReportOwnersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\Owners\ReportOwnersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.ReportOwnersViewModel" Collapsed="true">
+    <Position X="17.25" Y="6.5" Width="2.25" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="7.348" />
+        <Point X="18.375" Y="7.348" />
+        <Point X="18.375" Y="7.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAABQA=</HashCode>
+      <FileName>Reports\Owners\ReportOwnersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.DataAccess" Collapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAgAAAACAEAAAAAAABAAAIAAAAAAABA=</HashCode>
+      <FileName>Services\DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.FirstModel" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAMAEIAJoACAABAAAUAIAAAUEAAAAIABAAAAAgQA=</HashCode>
+      <FileName>Other\FirstModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.NotifyPropertyChanged" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other\NotifyPropertyChanged.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SNT.SecondModel" Collapsed="true">
+    <Position X="22.25" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.062" />
+        <Point X="15.25" Y="8.392" />
+        <Point X="23" Y="8.392" />
+        <Point X="23" Y="8.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABAAABABAAAAAAAAAAAAAAAIAAAAAAAAQA=</HashCode>
+      <FileName>Other\SecondModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.RelayCommand" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

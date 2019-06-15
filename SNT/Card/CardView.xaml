@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="SNT.CardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SNT"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="TabItem">
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="Background" Value="LightSteelBlue"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10,3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="10,3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+        </Style>
+        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="DarkGray"/>
+                    <Setter Property="Background" Value="Gray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0" Grid.Column="0">
+            <TextBlock Text="Период расчета:" Margin="2,0"/>
+            <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding SelectedPeriod}" 
+                      IsEditable="True" IsReadOnly="True"/>
+            <Button Content="Рассчитать" Command="{Binding RaschetCommand}"/>
+        </ToolBar>
+        <TextBox Grid.Row="0" Grid.Column="1" IsReadOnly="True" Margin="5,0" Background="LightGray" 
+                 DataContext="{Binding Card}" Text="{Binding CardInfo}"/>
+        <TabControl Grid.Row="1" Grid.ColumnSpan="2" TabStripPlacement="Left">
+            <TabItem Header="Свойства" >
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <ContentControl Content="{Binding Svoistva}"/>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Собственники">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <ContentControl Content="{Binding Sobstvenniki}"/>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Приборы учета">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <ContentControl Content="{Binding Counters}"/>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Начисления">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <ContentControl Content="{Binding Nachisleniya}"/>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Оплаты">
+                <ContentControl Content="{Binding Oplaty}"/>
+            </TabItem>
+            <TabItem Header="Взносы">
+                <ContentControl Content="{Binding VznosDisable}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

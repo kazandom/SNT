@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="SNT.ParametersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SNT"             
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Список параметров" BorderBrush="LightGray" BorderThickness="2" Margin="10">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!-- FocusManager.IsFocusScope="False" в ToolBar решает проблему фиксации изменений 
+                в строке DataGrid при нажатии на кнопку Сохранить -->
+                <ToolBar Grid.Row="0" FocusManager.IsFocusScope="False">
+                    <Button Content="Сохранить" Command="{Binding SaveCommand}"/>
+                    <Separator/>
+                    <Button Content="Добавить" Command="{Binding AddCommand}"/>
+                    <Button Content="Удалить" Command="{Binding DeleteCommand}"/>
+                </ToolBar>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding DataView}" SelectedItem="{Binding SelectedRow}" 
+                            IsReadOnly="False" CanUserAddRows="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Наименование" Binding="{Binding Path=NAME}" />
+                        <DataGridCheckBoxColumn Header="Глобальный" Binding="{Binding Path=GLOBAL_, UpdateSourceTrigger=PropertyChanged}" Width="*">
+                            <DataGridCheckBoxColumn.ElementStyle>
+                                <Style TargetType="{x:Type CheckBox}">
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Style>
+                            </DataGridCheckBoxColumn.ElementStyle>
+                            <DataGridCheckBoxColumn.EditingElementStyle>
+                                <Style TargetType="{x:Type CheckBox}">
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Style>
+                            </DataGridCheckBoxColumn.EditingElementStyle>
+                        </DataGridCheckBoxColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

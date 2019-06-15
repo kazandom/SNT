@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="character set=UTF8;data source=localhost;initial catalog=base;user id=SYSDBA;Password=password" IsAppSettingsProperty="false" Modifier="Assembly" Name="localhost (base)" ParameterPrefix="@" Provider="FirebirdSql.Data.FirebirdClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CURRENT_DOLGTableAdapter" GeneratorDataComponentClassName="CURRENT_DOLGTableAdapter" Name="CURRENT_DOLG" UserDataComponentName="CURRENT_DOLGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="localhost (base)" DbObjectName="CURRENT_DOLG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "N", "ALLEYA", "DOLG", "K_OPLATE", "ITOGO_K_OPLATE", "OPLACHENO", "ITOGO_DOLG" FROM "CURRENT_DOLG"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="N" DataSetColumn="N" />
+              <Mapping SourceColumn="ALLEYA" DataSetColumn="ALLEYA" />
+              <Mapping SourceColumn="DOLG" DataSetColumn="DOLG" />
+              <Mapping SourceColumn="K_OPLATE" DataSetColumn="K_OPLATE" />
+              <Mapping SourceColumn="ITOGO_K_OPLATE" DataSetColumn="ITOGO_K_OPLATE" />
+              <Mapping SourceColumn="OPLACHENO" DataSetColumn="OPLACHENO" />
+              <Mapping SourceColumn="ITOGO_DOLG" DataSetColumn="ITOGO_DOLG" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OWNERSTableAdapter" GeneratorDataComponentClassName="OWNERSTableAdapter" Name="OWNERS" UserDataComponentName="OWNERSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="localhost (base)" DbObjectName="OWNERS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "FAMILIYA", "IMYA", "OTCHESTVO", "PHONE", "EMAIL", "ADDRESS", "N", "DOCUMENT", "DOLYA", "DATA_IN" FROM "OWNERS"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FAMILIYA" DataSetColumn="FAMILIYA" />
+              <Mapping SourceColumn="IMYA" DataSetColumn="IMYA" />
+              <Mapping SourceColumn="OTCHESTVO" DataSetColumn="OTCHESTVO" />
+              <Mapping SourceColumn="PHONE" DataSetColumn="PHONE" />
+              <Mapping SourceColumn="EMAIL" DataSetColumn="EMAIL" />
+              <Mapping SourceColumn="ADDRESS" DataSetColumn="ADDRESS" />
+              <Mapping SourceColumn="N" DataSetColumn="N" />
+              <Mapping SourceColumn="DOCUMENT" DataSetColumn="DOCUMENT" />
+              <Mapping SourceColumn="DOLYA" DataSetColumn="DOLYA" />
+              <Mapping SourceColumn="DATA_IN" DataSetColumn="DATA_IN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PERIOD_SELECTIONTableAdapter" GeneratorDataComponentClassName="PERIOD_SELECTIONTableAdapter" Name="PERIOD_SELECTION" UserDataComponentName="PERIOD_SELECTIONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="localhost (base)" DbObjectName="PERIOD_SELECTION" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM "PERIOD_SELECTION" WHERE (("PERIOD" = @Original_PERIOD) AND ("OPERATING" = @Original_OPERATING))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_PERIOD" Precision="0" Scale="0" Size="2" SourceColumn="PERIOD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_OPERATING" Precision="0" Scale="0" Size="1" SourceColumn="OPERATING" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO "PERIOD_SELECTION" ("PERIOD", "OPERATING") VALUES (@PERIOD, @OPERATING)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@PERIOD" Precision="0" Scale="0" Size="2" SourceColumn="PERIOD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@OPERATING" Precision="0" Scale="0" Size="1" SourceColumn="OPERATING" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "PERIOD", "OPERATING" FROM "PERIOD_SELECTION"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE "PERIOD_SELECTION" SET "PERIOD" = @PERIOD, "OPERATING" = @OPERATING WHERE (("PERIOD" = @Original_PERIOD) AND ("OPERATING" = @Original_OPERATING))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@PERIOD" Precision="0" Scale="0" Size="2" SourceColumn="PERIOD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@OPERATING" Precision="0" Scale="0" Size="1" SourceColumn="OPERATING" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_PERIOD" Precision="0" Scale="0" Size="2" SourceColumn="PERIOD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_OPERATING" Precision="0" Scale="0" Size="1" SourceColumn="OPERATING" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PERIOD" DataSetColumn="PERIOD" />
+              <Mapping SourceColumn="OPERATING" DataSetColumn="OPERATING" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CURRENT_DOLG" msprop:Generator_TableClassName="CURRENT_DOLGDataTable" msprop:Generator_TableVarName="tableCURRENT_DOLG" msprop:Generator_RowChangedName="CURRENT_DOLGRowChanged" msprop:Generator_TablePropName="CURRENT_DOLG" msprop:Generator_RowDeletingName="CURRENT_DOLGRowDeleting" msprop:Generator_RowChangingName="CURRENT_DOLGRowChanging" msprop:Generator_RowEvHandlerName="CURRENT_DOLGRowChangeEventHandler" msprop:Generator_RowDeletedName="CURRENT_DOLGRowDeleted" msprop:Generator_RowClassName="CURRENT_DOLGRow" msprop:Generator_UserTableName="CURRENT_DOLG" msprop:Generator_RowEvArgName="CURRENT_DOLGRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="N" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnN" msprop:Generator_ColumnPropNameInRow="N" msprop:Generator_ColumnPropNameInTable="NColumn" msprop:Generator_UserColumnName="N" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALLEYA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnALLEYA" msprop:Generator_ColumnPropNameInRow="ALLEYA" msprop:Generator_ColumnPropNameInTable="ALLEYAColumn" msprop:Generator_UserColumnName="ALLEYA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOLG" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDOLG" msprop:Generator_ColumnPropNameInRow="DOLG" msprop:Generator_ColumnPropNameInTable="DOLGColumn" msprop:Generator_UserColumnName="DOLG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="K_OPLATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnK_OPLATE" msprop:Generator_ColumnPropNameInRow="K_OPLATE" msprop:Generator_ColumnPropNameInTable="K_OPLATEColumn" msprop:Generator_UserColumnName="K_OPLATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITOGO_K_OPLATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITOGO_K_OPLATE" msprop:Generator_ColumnPropNameInRow="ITOGO_K_OPLATE" msprop:Generator_ColumnPropNameInTable="ITOGO_K_OPLATEColumn" msprop:Generator_UserColumnName="ITOGO_K_OPLATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OPLACHENO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOPLACHENO" msprop:Generator_ColumnPropNameInRow="OPLACHENO" msprop:Generator_ColumnPropNameInTable="OPLACHENOColumn" msprop:Generator_UserColumnName="OPLACHENO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITOGO_DOLG" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITOGO_DOLG" msprop:Generator_ColumnPropNameInRow="ITOGO_DOLG" msprop:Generator_ColumnPropNameInTable="ITOGO_DOLGColumn" msprop:Generator_UserColumnName="ITOGO_DOLG" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OWNERS" msprop:Generator_TableClassName="OWNERSDataTable" msprop:Generator_TableVarName="tableOWNERS" msprop:Generator_RowChangedName="OWNERSRowChanged" msprop:Generator_TablePropName="OWNERS" msprop:Generator_RowDeletingName="OWNERSRowDeleting" msprop:Generator_RowChangingName="OWNERSRowChanging" msprop:Generator_RowEvHandlerName="OWNERSRowChangeEventHandler" msprop:Generator_RowDeletedName="OWNERSRowDeleted" msprop:Generator_RowClassName="OWNERSRow" msprop:Generator_UserTableName="OWNERS" msprop:Generator_RowEvArgName="OWNERSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FAMILIYA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFAMILIYA" msprop:Generator_ColumnPropNameInRow="FAMILIYA" msprop:Generator_ColumnPropNameInTable="FAMILIYAColumn" msprop:Generator_UserColumnName="FAMILIYA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMYA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMYA" msprop:Generator_ColumnPropNameInRow="IMYA" msprop:Generator_ColumnPropNameInTable="IMYAColumn" msprop:Generator_UserColumnName="IMYA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTCHESTVO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOTCHESTVO" msprop:Generator_ColumnPropNameInRow="OTCHESTVO" msprop:Generator_ColumnPropNameInTable="OTCHESTVOColumn" msprop:Generator_UserColumnName="OTCHESTVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PHONE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPHONE" msprop:Generator_ColumnPropNameInRow="PHONE" msprop:Generator_ColumnPropNameInTable="PHONEColumn" msprop:Generator_UserColumnName="PHONE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EMAIL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEMAIL" msprop:Generator_ColumnPropNameInRow="EMAIL" msprop:Generator_ColumnPropNameInTable="EMAILColumn" msprop:Generator_UserColumnName="EMAIL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADDRESS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnADDRESS" msprop:Generator_ColumnPropNameInRow="ADDRESS" msprop:Generator_ColumnPropNameInTable="ADDRESSColumn" msprop:Generator_UserColumnName="ADDRESS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="N" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnN" msprop:Generator_ColumnPropNameInRow="N" msprop:Generator_ColumnPropNameInTable="NColumn" msprop:Generator_UserColumnName="N" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOCUMENT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDOCUMENT" msprop:Generator_ColumnPropNameInRow="DOCUMENT" msprop:Generator_ColumnPropNameInTable="DOCUMENTColumn" msprop:Generator_UserColumnName="DOCUMENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOLYA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDOLYA" msprop:Generator_ColumnPropNameInRow="DOLYA" msprop:Generator_ColumnPropNameInTable="DOLYAColumn" msprop:Generator_UserColumnName="DOLYA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATA_IN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDATA_IN" msprop:Generator_ColumnPropNameInRow="DATA_IN" msprop:Generator_ColumnPropNameInTable="DATA_INColumn" msprop:Generator_UserColumnName="DATA_IN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PERIOD_SELECTION" msprop:Generator_TableClassName="PERIOD_SELECTIONDataTable" msprop:Generator_TableVarName="tablePERIOD_SELECTION" msprop:Generator_TablePropName="PERIOD_SELECTION" msprop:Generator_RowDeletingName="PERIOD_SELECTIONRowDeleting" msprop:Generator_RowChangingName="PERIOD_SELECTIONRowChanging" msprop:Generator_RowEvHandlerName="PERIOD_SELECTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="PERIOD_SELECTIONRowDeleted" msprop:Generator_UserTableName="PERIOD_SELECTION" msprop:Generator_RowChangedName="PERIOD_SELECTIONRowChanged" msprop:Generator_RowEvArgName="PERIOD_SELECTIONRowChangeEvent" msprop:Generator_RowClassName="PERIOD_SELECTIONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERIOD" msprop:Generator_ColumnVarNameInTable="columnPERIOD" msprop:Generator_ColumnPropNameInRow="PERIOD" msprop:Generator_ColumnPropNameInTable="PERIODColumn" msprop:Generator_UserColumnName="PERIOD" type="xs:short" />
+              <xs:element name="OPERATING" msprop:Generator_ColumnVarNameInTable="columnOPERATING" msprop:Generator_ColumnPropNameInRow="OPERATING" msprop:Generator_ColumnPropNameInTable="OPERATINGColumn" msprop:Generator_UserColumnName="OPERATING" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PERIOD_SELECTION" />
+      <xs:field xpath="mstns:PERIOD" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

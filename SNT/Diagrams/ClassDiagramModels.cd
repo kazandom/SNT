@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SNT.FirstModel">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SNT.FirstModel.DictEntry">
+        <TypeIdentifier>
+          <NewMemberFileName>Other\FirstModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIAAMAEIAJoACAABAAAUAIAAAUEAAAAIABAAAAAgQA=</HashCode>
+      <FileName>Other\FirstModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SecondModel">
+    <Position X="5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABAAABABAAAAAAAAAAAAAAAIAAAAAAAAQA=</HashCode>
+      <FileName>Other\SecondModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.NotifyPropertyChanged">
+    <Position X="7.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other\NotifyPropertyChanged.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SNT.RelayCommand">
+    <Position X="7.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SNT.DataAccess">
+    <Position X="5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAABAAAAgAAAACAEAAQAAAABAAAIAAAAAAABA=</HashCode>
+      <FileName>Services\DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

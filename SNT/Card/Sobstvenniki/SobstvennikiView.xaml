@@ -1,0 +1,136 @@
+﻿<UserControl x:Class="SNT.SobstvennikiView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SNT"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+    </UserControl.Resources>
+    <!-- FocusManager.FocusedElement, указывающий на дочерний элемент,
+    чтобы фокус при открытии устанавливался на нужный элемент -->
+    <Grid FocusManager.FocusedElement="{Binding ElementName=FocusedElement}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Имеющиеся собственники" BorderBrush="LightGray" 
+                  BorderThickness="2" Margin="10">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ToolBar Grid.Row="0" FocusManager.IsFocusScope="False">
+                    <Button Content="Сохранить" Command="{Binding SaveSobstvUchCommand}"/>
+                    <Separator/>
+                    <Button Content="Добавить" Command="{Binding AddSobstvUchCommand}"/>
+                    <Button Content="Удалить" Command="{Binding DeleteSobstvUchCommand}"/>
+                    <Separator/>
+                    <CheckBox Content="Показать бывших собственников" Command="{Binding ShowSobstvUchCommand}"
+                              CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}"
+                              FocusManager.IsFocusScope="True"/>
+                </ToolBar>
+                <DataGrid x:Name="FocusedElement" Grid.Row="1" IsReadOnly="False" 
+                          CanUserAddRows="False" ItemsSource="{Binding DataView}"
+                          SelectedIndex="{Binding Selected}" SelectedItem="{Binding SelectedRow}">
+                    <DataGrid.Columns>
+                        <DataGridComboBoxColumn Header="ФИО" DisplayMemberPath="Name" 
+                                                SelectedValuePath="Id" 
+                                                SelectedValueBinding="{Binding Path=ID_SOBSTVENNIK}">
+                            <DataGridComboBoxColumn.ElementStyle>
+                                <Style TargetType="{x:Type ComboBox}">
+                                    <Setter Property="ItemsSource" Value="{Binding DataContext.Dictionary, 
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                </Style>
+                            </DataGridComboBoxColumn.ElementStyle>
+                            <DataGridComboBoxColumn.EditingElementStyle>
+                                <Style TargetType="{x:Type ComboBox}">
+                                    <Setter Property="ItemsSource" Value="{Binding DataContext.Dictionary, 
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                    <Setter Property="IsEditable" Value="True"/>
+                                    <Setter Property="Padding" Value="1"/>
+                                </Style>
+                            </DataGridComboBoxColumn.EditingElementStyle>
+                        </DataGridComboBoxColumn>
+                        <DataGridTextColumn Header="Доля в праве" Binding="{Binding Path=DOLYA}" />
+                        <DataGridTemplateColumn Header="Начало владения" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DATA_IN, StringFormat=d, ConverterCulture=ru-RU}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                            <DataGridTemplateColumn.CellEditingTemplate>
+                                <DataTemplate>
+                                    <Grid FocusManager.FocusedElement="{Binding ElementName=datePicker}">
+                                        <DatePicker x:Name="datePicker" SelectedDate="{Binding DATA_IN}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellEditingTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Окончание владения" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DATA_OUT, StringFormat=d, ConverterCulture=ru-RU}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                            <DataGridTemplateColumn.CellEditingTemplate>
+                                <DataTemplate>
+                                    <Grid FocusManager.FocusedElement="{Binding ElementName=datePicker}">
+                                        <DatePicker x:Name="datePicker" SelectedDate="{Binding DATA_OUT}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellEditingTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Документ" Binding="{Binding Path=DOCUMENT}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Данные выбранного собственника" BorderBrush="LightGray" 
+                  BorderThickness="2" Margin="10">
+            <StackPanel Orientation="Vertical">
+                <WrapPanel DataContext="{Binding Sobstvennik}">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="250"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Фамилия"/>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Имя"/>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Отчество"/>
+                        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Familiya, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Imya, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Otchestvo, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="250"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Телефон"/>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Email"/>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Адрес"/>
+                        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
+                </WrapPanel>
+                <Button Content="Сохранить" HorizontalAlignment="Left" 
+                        BorderBrush="LightSteelBlue" Margin="20,0,0,10" 
+                        Command="{Binding SaveSobstvennikCommand}" />
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

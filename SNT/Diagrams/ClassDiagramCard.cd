@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SNT.CountersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Counters\CountersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.CountersViewModel" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="3.312" />
+        <Point X="5.75" Y="3.312" />
+        <Point X="5.75" Y="3.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABIQUAIIEAACAAEAIAABEACIABAAjCBAAQAQCAECgAg=</HashCode>
+      <FileName>Card\Counters\CountersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.PokazanieModel" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.75" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.5" Y="3.312" />
+        <Point X="9.188" Y="3.312" />
+        <Point X="9.188" Y="3.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Counters\PokazanieModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SchetchikModel" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.5" Y="3.312" />
+        <Point X="7.5" Y="3.312" />
+        <Point X="7.5" Y="3.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Counters\SchetchikModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.NachislenieModel" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.75" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.5" Y="3.312" />
+        <Point X="9.198" Y="3.312" />
+        <Point X="9.198" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Nachisleniya\NachislenieModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.NachisleniyaView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Nachisleniya\NachisleniyaView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.NachisleniyaViewModel" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="2.5" Y="3.312" />
+        <Point X="5.75" Y="3.312" />
+        <Point X="5.75" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAIAQEAAAAAEAABABAgAAEAAABAYAAAAEAQAQEAE=</HashCode>
+      <FileName>Card\Nachisleniya\NachisleniyaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SumItogModel" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="SNT.FirstModel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="10.5" Y="3.312" />
+        <Point X="7.5" Y="3.312" />
+        <Point X="7.5" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Nachisleniya\SumItogModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.OplatyModel" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Oplaty\OplatyModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.OplatyView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Oplaty\OplatyView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.OplatyViewModel" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAECBAAAAAQAgAAgBAAAIAQAAAAEAQA=</HashCode>
+      <FileName>Card\Oplaty\OplatyViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SobstvennikiView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Sobstvenniki\SobstvennikiView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.SobstvennikiViewModel" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true">
+      <Path>
+        <Point X="1.625" Y="3" />
+        <Point X="1.625" Y="2.345" />
+        <Point X="5.75" Y="2.345" />
+        <Point X="5.75" Y="2.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAEgAAACQAQAAkIBACACAZAgAACBAABAAAAAwAAAAI=</HashCode>
+      <FileName>Card\Sobstvenniki\SobstvennikiViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SobstvennikModel" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.75" />
+    <InheritanceLine Type="SNT.SecondModel" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="0.5" />
+        <Point X="1.625" Y="0.231" />
+        <Point X="10.622" Y="0.231" />
+        <Point X="10.622" Y="1.875" />
+        <Point X="10" Y="1.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAAAAAAQAAAAAAAAAAAAACAAAAIAEAAAA=</HashCode>
+      <FileName>Card\Sobstvenniki\SobstvennikModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SobstvUchModel" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Sobstvenniki\SobstvUchModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.OsnovnoeModel" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="SNT.SecondModel" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="0.5" />
+        <Point X="1.625" Y="0.233" />
+        <Point X="7.5" Y="0.233" />
+        <Point X="7.5" Y="0.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAABACAAAAAAAAAAAAACABCAAAA=</HashCode>
+      <FileName>Card\Svoistva\OsnovnoeModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.ParamUchModel" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Svoistva\ParamUchModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SvoistvaView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\Svoistva\SvoistvaView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.SvoistvaViewModel" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="2" />
+    <InheritanceLine Type="SNT.NotifyPropertyChanged" FixedFromPoint="true">
+      <Path>
+        <Point X="1.625" Y="3" />
+        <Point X="1.625" Y="1.345" />
+        <Point X="5.75" Y="1.345" />
+        <Point X="5.75" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIABAAAAAAAAABAZAAAREwAAABAAAAAAAgBAAgKA=</HashCode>
+      <FileName>Card\Svoistva\SvoistvaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.VznosDisableModel" Collapsed="true">
+    <Position X="6.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\VznosDisable\VznosDisableModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.VznosDisableView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card\VznosDisable\VznosDisableView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SNT.VznosDisableViewModel" Collapsed="true">
+    <Position X="4.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAECBAAAAAQEgAAgBAAAIAQAAACEAQA=</HashCode>
+      <FileName>Card\VznosDisable\VznosDisableViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.NotifyPropertyChanged" Collapsed="true">
+    <Position X="0.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other\NotifyPropertyChanged.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SNT.FirstModel" Collapsed="true">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAMAEIAJoACAABAAAUAIAAAUEAAAAIABAAAAAgQA=</HashCode>
+      <FileName>Other\FirstModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.SecondModel" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABAAABABAAAAAAAAAAAAAAAIAAAAAAAAQA=</HashCode>
+      <FileName>Other\SecondModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.DataAccess" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAgAAAACAEAAAAAAABAAAIAAAAAAABA=</HashCode>
+      <FileName>Services\DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SNT.RelayCommand" Collapsed="true">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
